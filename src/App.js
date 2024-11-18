@@ -2,10 +2,9 @@ import React, { useCallback, useEffect, useRef, useState, useMemo } from "react"
 import { WaveSurfer, WaveForm, Region } from "wavesurfer-react";
 import "./App.css";
 import RegionsPlugin from "wavesurfer.js/dist/plugins/regions";
-// import sound from './assets/sound.wav';
+import sound from './assets/sound.wav';
 
 function App() {
-  let sound = "https://demo-odio-calls.s3.ap-south-1.amazonaws.com/merged_calls/ClearNexus/65e11bdbd0877.wav?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20241118T115926Z&X-Amz-SignedHeaders=host&X-Amz-Expires=604800&X-Amz-Credential=AKIA6DWP242KUOFZICE7%2F20241118%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Signature=253dab99901c673628d196a1cbcd8815caa9a2a4fef3898cae585f53ee08f2e7"
   const [isLoaded, setIsLoaded] = useState(false);
   const [audioDuration, setAudioDuration] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);  // New state to track play/pause
